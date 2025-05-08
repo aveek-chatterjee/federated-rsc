@@ -27,11 +27,6 @@ export default function RootLayout({
                   Home
                 </a>
               </li>
-              <li>
-                <a href="/micro-app" className="hover:underline">
-                  Micro App
-                </a>
-              </li>
             </ul>
           </nav>
         </header>
