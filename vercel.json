@@ -1,26 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "turbo build",
+  "buildCommand": "pnpm install && pnpm build",
   "installCommand": "pnpm install",
-  "outputDirectory": "dist",
+  "outputDirectory": "apps/home/.next",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./apps/home/",
   "github": {
     "enabled": true,
     "silent": true
-  },
-  "projects": [
-    {
-      "name": "host",
-      "path": "apps/host",
-      "buildCommand": "cd ../.. && pnpm run build --filter=host",
-      "outputDirectory": "apps/host/.next",
-      "framework": "nextjs"
-    },
-    {
-      "name": "micro-app",
-      "path": "apps/micro-app",
-      "buildCommand": "cd ../.. && pnpm run build --filter=micro-app",
-      "outputDirectory": "apps/micro-app/.next",
-      "framework": "nextjs"
-    }
-  ]
+  }
 }

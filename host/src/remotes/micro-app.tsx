@@ -7,6 +7,9 @@ interface RemoteComponentWrapperProps extends RemoteComponentProps {
   initialHtml?: string;
 }
 
+const REMOTE_COMPONENT_URL =
+  process.env.NEXT_PUBLIC_REMOTE_COMPONENT_URL || "http://localhost:3001";
+
 export default function RemoteComponent({
   initialHtml,
   ...props
@@ -21,7 +24,7 @@ export default function RemoteComponent({
     const fetchComponent = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3001/api/remote-component",
+          `${REMOTE_COMPONENT_URL}/api/remote-component`,
           {
             method: "POST",
             headers: {
