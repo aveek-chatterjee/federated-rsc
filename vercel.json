@@ -1,0 +1,10 @@
+{
+  "workspaces": {
+    "host": {
+      "root": "host"
+    },
+    "micro-app": {
+      "root": "micro-app"
+    }
+  }
+}
