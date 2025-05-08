@@ -1,0 +1,7 @@
+node_modules/
+package-lock.json
+host/next-env.d.ts
+host/.next/
+micro-app/.next/
+micro-app/next-env.d.ts
+.DS_Store
