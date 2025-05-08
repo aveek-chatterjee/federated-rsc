@@ -25,6 +25,7 @@ export async function POST(request: NextRequest) {
     // Return the HTML with appropriate headers
     return new NextResponse(html, {
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "text/html",
       },
     });
