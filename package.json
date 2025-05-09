@@ -3,17 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "host",
     "micro-app"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:host\" \"npm run dev:micro-app\"",
-    "dev:host": "cd host && npm run dev",
+    "dev": "npm run dev:micro-app",
     "dev:micro-app": "cd micro-app && npm run dev",
-    "build": "npm run build:micro-app && npm run build:host",
-    "build:host": "cd host && npm run build",
+    "build": "npm run build:micro-app",
     "build:micro-app": "cd micro-app && npm run build",
-    "start": "concurrently \"npm run dev:host\" \"npm run dev:micro-app\""
+    "start": "cd micro-app && npm run start"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
