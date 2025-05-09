@@ -13,7 +13,7 @@
     "build": "npm run build:micro-app && npm run build:host",
     "build:host": "cd host && npm run build",
     "build:micro-app": "cd micro-app && npm run build",
-    "start": "cd host && npm run start"
+    "start": "cd micro-app && npm run start"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
